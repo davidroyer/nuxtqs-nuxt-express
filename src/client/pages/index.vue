@@ -3,7 +3,7 @@
     <div>
       <logo/>
       <h1 class="title">
-        nuxt-express
+        Attempting to use subdomain: nuxt-express
       </h1>
       <h2 class="subtitle">
         Nuxt.js with Express
