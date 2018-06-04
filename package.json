@@ -1,6 +1,6 @@
 {
   "name": "nuxt-express",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Nuxt.js with Express",
   "author": "David Royer",
   "private": true,
@@ -10,7 +10,8 @@
     "start": "cross-env NODE_ENV=production node dist/server/main.js",
     "generate": "nuxt generate",
     "build-server": "backpack build",
-    "build-client": "nuxt build"
+    "build-client": "nuxt build",
+    "deploy:now": "now --public && now alias"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
@@ -24,8 +25,7 @@
     "cross-env": "^5.0.1",
     "nodemon": "^1.11.0"
   },
-  "now": {
-    "name": "nuxtqs-express",
-    "alias": "nuxtqs-express.now.sh"
+  "engines": {
+    "node": ">=8.7.0"
   }
 }

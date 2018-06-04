@@ -27,6 +27,6 @@ async function start() {
   // Listen the server
   app.listen(port, host)
   console.log('Server listening on http://' + host + ':' + port) // eslint-disable-line no-console
-  console.log('NEW MESSAGE FROM SRC SERVER FILE');
+  console.log('NEW2 MESSAGE FROM SRC SERVER FILE');
 }
 start()

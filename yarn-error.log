@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/droyer/.nvm/versions/node/v8.7.0/bin/node /Users/droyer/.yarn/bin/yarn.js dev2
+  /Users/droyer/.nvm/versions/node/v8.7.0/bin/node /Users/droyer/.yarn/bin/yarn.js deploy:now
 
 PATH: 
   /Users/droyer/.yarn/bin:/Users/droyer/.nvm/versions/node/v8.7.0/bin:/users/droyer/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -16,32 +16,33 @@ Platform:
 npm manifest: 
   {
     "name": "nuxt-express",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "Nuxt.js with Express",
     "author": "David Royer",
     "private": true,
     "scripts": {
-      "dev": "cross-env NODE_ENV=development nodemon src/server/index.js --watch server",
-      "build": "nuxt build:",
-      "start": "cross-env NODE_ENV=production node server/index.js",
-      "dev2": "backpack dev",
-      "build2": "nuxt build && backpack build",
-      "start2": "cross-env NODE_ENV=production node ./dist/server/main.js",
+      "dev": "backpack dev",
+      "build": "nuxt build && backpack build",
+      "start": "cross-env NODE_ENV=production node dist/server/main.js",
       "generate": "nuxt generate",
       "build-server": "backpack build",
-      "build-client": "nuxt build"
+      "build-client": "nuxt build",
+      "deploy:now": "now --public && now alias",
     },
-  
     "dependencies": {
-      "nuxt": "^1.0.0",
-      "express": "^4.15.3",
-      "bootstrap-vue": "^1.0.2",
+      "@nuxtjs/axios": "^5.0.0",
       "bootstrap": "^4.0.0-beta.2",
-      "@nuxtjs/axios": "^5.0.0"
+      "bootstrap-vue": "^1.0.2",
+      "express": "^4.15.3",
+      "nuxt": "^1.0.0"
     },
     "devDependencies": {
+      "backpack-core": "^0.7.0",
       "cross-env": "^5.0.1",
       "nodemon": "^1.11.0"
+    },
+    "engines": {
+      "node": ">=8.7.0"
     }
   }
 
@@ -6304,17 +6305,10 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c backpack dev
-  Directory: /Users/droyer/Playground-2017/nuxt-quickstart/nuxt-express
-  Output:
-  
-      at ProcessTermError.MessageError (/Users/droyer/.yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/Users/droyer/.yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/Users/droyer/.yarn/lib/cli.js:30281:17)
-      at emitTwo (events.js:125:13)
-      at ChildProcess.emit (events.js:213:7)
-      at maybeClose (internal/child_process.js:927:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+  SyntaxError: /Users/droyer/Playground-2017/nuxt-quickstart/nuxt-express/package.json: Unexpected token } in JSON at position 449
+      at JSON.parse (<anonymous>)
+      at /Users/droyer/.yarn/lib/cli.js:1036:59
+      at Generator.next (<anonymous>)
+      at step (/Users/droyer/.yarn/lib/cli.js:98:30)
+      at /Users/droyer/.yarn/lib/cli.js:109:13
+      at <anonymous>
