@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000
 app.set('port', port)
 
 // Import and Set Nuxt.js options
-let config = require('../nuxt.config.js')
+let config = require('../../nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
 
 async function start() {
@@ -27,5 +27,6 @@ async function start() {
   // Listen the server
   app.listen(port, host)
   console.log('Server listening on http://' + host + ':' + port) // eslint-disable-line no-console
+  console.log('NEW MESSAGE FROM SRC SERVER FILE');
 }
 start()

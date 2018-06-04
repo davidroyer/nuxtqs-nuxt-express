@@ -1,7 +1,11 @@
 const pkg = require('./package')
+const path = require('path')
 
 module.exports = {
-  mode: 'universal',
+
+  srcDir: path.resolve(__dirname, 'src', 'client'),
+
+  buildDir: 'dist/client',
 
   /*
   ** Headers of the page
@@ -55,11 +59,12 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }
