@@ -3,10 +3,10 @@
     <div>
       <logo/>
       <h1 class="title">
-        Attempting to use subdomain: nuxt-express
+        Nuxt.js with Express
       </h1>
       <h2 class="subtitle">
-        Nuxt.js with Express
+        Using Custom Directory Structure
       </h2>
       <h3>Something New 2</h3>
       <div class="links">
@@ -24,7 +24,6 @@ export default {
     Logo
   },
   mounted() {
-    alert('NEWER - from index inside pages!')
   }
 }
 </script>
